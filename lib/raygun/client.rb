@@ -131,7 +131,7 @@ module Raygun
         body = JSON.generate(payload_hash)
         puts body.to_s
         
-        self.class.post("/entries", headers: @headers, body: json)
+        self.class.post("/entries", headers: @headers, body: body)
       end
 
       def filter_params(params_hash, extra_filter_keys = nil)
