@@ -127,6 +127,7 @@ module Raygun
       end
 
       def create_entry(payload_hash)
+        puts payload_hash.to_s
         self.class.post("/entries", headers: @headers, body: JSON.generate(payload_hash))
       end
 
